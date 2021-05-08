@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6A6BB38-7BCB-419D-863B-26F395008B74}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DiplomWork</RootNamespace>
+    <AssemblyName>DiplomWork</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\ActionItem.cs" />
+    <Compile Include="Actions\MyAction.cs" />
+    <Compile Include="HelpForms\CreateTabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpForms\CreateTabForm.Designer.cs">
+      <DependentUpon>CreateTabForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FromHFSMtoScript.cs" />
+    <Compile Include="ActionForms\ItemActionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionForms\ItemActionForm.Designer.cs">
+      <DependentUpon>ItemActionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TriggerForms\ItemIfForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TriggerForms\ItemIfForm.Designer.cs">
+      <DependentUpon>ItemIfForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Triggers\Trigger.cs" />
+    <Compile Include="TriggerForms\AddTriggerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TriggerForms\AddTriggerForm.Designer.cs">
+      <DependentUpon>AddTriggerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TriggerForms\FixedTimeDayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TriggerForms\FixedTimeDayForm.Designer.cs">
+      <DependentUpon>FixedTimeDayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TriggerForms\ItemEventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TriggerForms\ItemEventForm.Designer.cs">
+      <DependentUpon>ItemEventForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TriggerForms\ItemStateChangesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TriggerForms\ItemStateChangesForm.Designer.cs">
+      <DependentUpon>ItemStateChangesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TriggerForms\ItemStateUpdatedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TriggerForms\ItemStateUpdatedForm.Designer.cs">
+      <DependentUpon>ItemStateUpdatedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TriggerForms\SendCommandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TriggerForms\SendCommandForm.Designer.cs">
+      <DependentUpon>SendCommandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TriggerForms\SystemEventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TriggerForms\SystemEventForm.Designer.cs">
+      <DependentUpon>SystemEventForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TriggerForms\ThingEventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TriggerForms\ThingEventForm.Designer.cs">
+      <DependentUpon>ThingEventForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TriggerForms\TimeEventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TriggerForms\TimeEventForm.Designer.cs">
+      <DependentUpon>TimeEventForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Triggers\TriggerIf.cs" />
+    <Compile Include="Triggers\TriggerItem.cs" />
+    <Compile Include="Triggers\TriggerSystem.cs" />
+    <Compile Include="Triggers\TriggerThing.cs" />
+    <Compile Include="Triggers\TriggerTime.cs" />
+    <Compile Include="UserControls\ControlHierarchicalFSM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ControlHierarchicalFSM.Designer.cs">
+      <DependentUpon>ControlHierarchicalFSM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ControlStateFSM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ControlStateFSM.Designer.cs">
+      <DependentUpon>ControlStateFSM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form.Designer.cs">
+      <DependentUpon>Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSM.cs" />
+    <Compile Include="HierarchicalFSM.cs" />
+    <Compile Include="TriggerForms\ItemReceivesCommandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TriggerForms\ItemReceivesCommandForm.Designer.cs">
+      <DependentUpon>ItemReceivesCommandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parser.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HelpForms\CreateTabForm.resx">
+      <DependentUpon>CreateTabForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TriggerForms\AddTriggerForm.resx">
+      <DependentUpon>AddTriggerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TriggerForms\FixedTimeDayForm.resx">
+      <DependentUpon>FixedTimeDayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionForms\ItemActionForm.resx">
+      <DependentUpon>ItemActionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TriggerForms\ItemEventForm.resx">
+      <DependentUpon>ItemEventForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TriggerForms\ItemIfForm.resx">
+      <DependentUpon>ItemIfForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TriggerForms\ItemStateChangesForm.resx">
+      <DependentUpon>ItemStateChangesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TriggerForms\ItemStateUpdatedForm.resx">
+      <DependentUpon>ItemStateUpdatedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TriggerForms\SendCommandForm.resx">
+      <DependentUpon>SendCommandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TriggerForms\SystemEventForm.resx">
+      <DependentUpon>SystemEventForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TriggerForms\ThingEventForm.resx">
+      <DependentUpon>ThingEventForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TriggerForms\TimeEventForm.resx">
+      <DependentUpon>TimeEventForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ControlHierarchicalFSM.resx">
+      <DependentUpon>ControlHierarchicalFSM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ControlStateFSM.resx">
+      <DependentUpon>ControlStateFSM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form.resx">
+      <DependentUpon>Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TriggerForms\ItemReceivesCommandForm.resx">
+      <DependentUpon>ItemReceivesCommandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
